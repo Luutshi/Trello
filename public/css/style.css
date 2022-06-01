@@ -1,0 +1,79 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: sans-serif;
+}
+main .tasks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .tasks .task {
+  width: 300px;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  height: fit-content;
+}
+main .tasks .task .task--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+main .tasks .task .task--header p {
+  width: 90%;
+}
+main .tasks .task .task--header span {
+  padding: 16px 0;
+}
+main .tasks .task .task--header input {
+  background-color: #e7e7e7;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 0 0 3px 0;
+}
+main .tasks .task .steps .step {
+  margin: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+main .tasks .task .steps .step p {
+  font-size: 13.5px;
+  width: 80%;
+}
+main .tasks .task .steps .step span {
+  padding: 15px 0;
+}
+main .tasks .task .steps .step input {
+  border: 0;
+  outline: 0;
+  padding: 0 0 3px 0;
+}
+main .tasks .task .addStep {
+  padding: 0px 12px 8px;
+}
+main .addTask {
+  font-size: 20px;
+  padding: 4px;
+  background-color: #e7e7e7;
+  border-radius: 6px;
+  text-align: center;
+  width: 500px;
+}
+
+/*# sourceMappingURL=style.css.map */

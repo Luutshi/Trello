@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+    <title>TrelloV2</title>
+</head>
+<body>
+    <header>
+        <h1>Trello</h1>
+    </header>
+
+    <main>
+        <div class="tasks">
+            {% for task in tasks %}
+                <div class="task task{{ task.id }}">
+                    <div class="task--header">
+                        {% if task.name %}
+                            <p id="{{ task.id }}">{{ task.name }}</p>
+                        {% else %}
+                            <input type="text" id="{{ task.id }}" placeholder="Enter a task name.">
+                        {% endif %}
+
+                        <span id="{{ task.id }}">❌️</span>
+                    </div>
+
+                    <div class="steps">
+                        {% for step in steps|filter(x => x.task_id == task.id) %}
+                            <div class="step step{{ step.id }}">
+                                {% if step.name %}
+                                    <p id="t{{ step.task_id }}s{{ step.id }}">{{ step.name }}</p>
+                                {% else %}
+                                    <input id="t{{ step.task_id }}s{{ step.id }}" type="text" placeholder="Enter a step name.">
+                                {% endif %}
+                                <span id="t{{ step.task_id }}s{{ step.id }}">❌</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="addStep" id="{{ task.id }}">+</div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="addTask">+</div>
+    </main>
+</body>
+</html>

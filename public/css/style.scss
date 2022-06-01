@@ -1,0 +1,91 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: sans-serif;
+
+  .tasks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .task {
+      width: 300px;
+      background-color: #e7e7e7;
+      border-radius: 5px;
+      height: fit-content;
+
+      .task--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+
+        p {
+          width: 90%;
+        }
+
+        span {
+          padding: 16px 0;
+        }
+
+        input {
+          background-color: #e7e7e7;
+          border: 0;
+          outline: 0;
+          font-size: 16px;
+          padding: 0 0 3px 0;
+        }
+      }
+
+      .steps {
+        .step {
+          margin: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          border-radius: 5px;
+          background-color: white;
+
+          p {
+            font-size: 13.5px;
+            width: 80%;
+          }
+
+          span {
+            padding: 15px 0;
+          }
+
+          input {
+            border: 0;
+            outline: 0;
+            padding: 0 0 3px 0;
+          }
+        }
+      }
+
+      .addStep {
+        padding: 0px 12px 8px;
+      }
+    }
+  }
+
+  .addTask {
+    font-size: 20px;
+    padding: 4px;
+    background-color: #e7e7e7;
+    border-radius: 6px;
+    text-align: center;
+    width: 500px;
+  }
+}
